@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+    <nav>
+        <a href="{% url 'products' %}">Products</a> |
+        <a href="{% url 'contact' %}">Contact Us</a> |
+        <a href="{% url 'homepage' %}">Homepage</a>
+    </nav>
+</body>
+</html>
